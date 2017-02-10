@@ -29,7 +29,7 @@ function build_page {
     populate_component $class_name $component_path;
     controller_path=$controller_directory/${module_name}.${page_name}_controller.inc;
     touch $controller_path;
-    populate_controller $class_name $controller_path;
+    populate_controller $module_name $class_name $controller_path;
     views_path=$views_directory/${module_name}.${page_name}.inc;
     touch $views_path;
     populate_view $module_name $page_name $class_name $views_path;

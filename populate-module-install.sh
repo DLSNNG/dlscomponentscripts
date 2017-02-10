@@ -31,7 +31,7 @@ cat <<EOF > $working_directory/$module_name.install
    
   function ${module_name}_install() {
     \$restRoutes = RestRoutes::get()
-      ->setRoute('$module_name', 'TestRoute', 'FakeURL')
+      ->setRoute('$module_name', 'TestRoute', 'http://localhost.com')
       ->save();
     \$restCredentials = RestCredentials::get()
       ->setCredentials('$module_name')
